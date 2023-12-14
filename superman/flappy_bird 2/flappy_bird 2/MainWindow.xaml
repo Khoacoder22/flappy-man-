@@ -1,0 +1,44 @@
+﻿<Window x:Class="flappy_bird_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:flappy_bird_2"
+        mc:Ignorable="d"
+        Title="Flappy Bird" Height="490" Width="525">
+    <Canvas Name="Mygame" Focusable="True" KeyDown="Down" KeyUp="Up" Background="LightBlue">
+
+
+        <Image x:Name="sky" Height="471" Width="523" Source="/images/sky.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="2" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.804"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-3.719"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Height="88" Width="106" Source="images/cloud.png" Tag="cloud" Canvas.Left="161" Canvas.Top="130" HorizontalAlignment="Left" VerticalAlignment="Top" />
+
+        <Image Height="390" Width="66" Source="images/pipeBottom.png" Tag="obs1" Canvas.Left="76" Canvas.Top="316" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Image Height="390" Width="66" Source="images/pipeTop.png" Tag="obs1" Canvas.Left="76" Canvas.Top="-236" />
+
+        <Image Height="390" Width="66" Source="images/pipeBottom.png" Tag="obs2" Canvas.Left="230" Canvas.Top="404" />
+        <Image Height="390" Width="66" Source="images/pipeTop.png" Tag="obs2" Canvas.Left="230" Canvas.Top="-182" HorizontalAlignment="Left" VerticalAlignment="Top" />
+
+        <Image Height="390" Width="66" Source="images/pipeBottom.png" Tag="obs3" Canvas.Left="426" Canvas.Top="352" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Image Height="390" Width="66" Source="images/pipeTop.png" Tag="obs3" Canvas.Left="426" Canvas.Top="-214" />
+
+        <Label x:Name="txtPoints" FontSize="22" FontWeight="ExtraBold" Content="Points: 0" />
+        <Image x:Name="superman" Height="39" Width="43" Source="/images/pngegg-min_2.png" Stretch="Fill" Canvas.Left="10" Canvas.Top="198"/>
+
+        <Label x:Name="reset" FontSize="22" FontWeight="ExtraBold" Content="Please press R to restart the game" Canvas.Left="77" Canvas.Top="316" HorizontalAlignment="Center" VerticalAlignment="Top"  Visibility="Collapsed"/>
+
+        <Image x:Name="Ending" Height="263" Width="363" Source="/images/ending.png"  Canvas.Left="130" Canvas.Top="53" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Collapsed"  />
+        <Label x:Name="FinalPoints" FontSize="22" FontWeight="ExtraBold" Content="Best Score: 0" Canvas.Left="176" Canvas.Top="259" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Collapsed"/>
+
+        <Image x:Name="Start" Height="94" Width="245" Source="/images/Start.png"  Canvas.Left="152" Canvas.Top="198" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible"  />
+
+    </Canvas>
+</Window>
